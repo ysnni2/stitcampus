@@ -47,7 +47,7 @@ Three photos taken on campus (SEOULTECH), capturing the same building from sligh
 
 ![Panorama Result](output/panorama_final.jpg)
 
-**Output size:** 300 x 400 px  
+**Output size:** 3052 x 4001 px
 **Inliers:** 108 (image 1↔2) / 107 (image 2↔3)
 
 ### Feature Matching Visualization
