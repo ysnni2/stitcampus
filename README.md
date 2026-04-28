@@ -1,4 +1,4 @@
-# panorama-auto-stitcher
+# stitcampus
 
 Automatic panorama image stitching using SIFT feature matching and Feathering Blend with OpenCV
 
@@ -21,7 +21,7 @@ All key components — feature detection, matching, homography estimation, and b
 - Automatic canvas size calculation to prevent image clipping
 - Black border cropping after stitching
 
-### Extra Feature ★ — Linear Feathering Blend
+### Linear Feathering Blend
 Instead of simple image overlay, this program applies **Feathering Blend** using distance transform to create smooth transitions at image boundaries.
 
 - Compute a valid pixel mask for each image
@@ -47,7 +47,7 @@ Three photos taken on campus (SEOULTECH), capturing the same building from sligh
 
 ![Panorama Result](output/panorama_final.jpg)
 
-**Output size:** 3052 x 4001 px  
+**Output size:** 300 x 400 px  
 **Inliers:** 108 (image 1↔2) / 107 (image 2↔3)
 
 ### Feature Matching Visualization
@@ -79,29 +79,6 @@ output/
 ├── step_1.jpg           # Intermediate result after step 1
 └── step_2.jpg           # Intermediate result after step 2
 ```
-
----
-
-## Pipeline
-
-```
-Load Images
-    ↓
-SIFT Feature Detection
-    ↓
-FLANN Matching + Lowe's Ratio Test
-    ↓
-RANSAC Homography Estimation
-    ↓
-warpPerspective (Image Warping)
-    ↓
-★ Feathering Blend
-    ↓
-Black Border Crop
-    ↓
-Save Result
-```
-
 ---
 
 ## Environment
